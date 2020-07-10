@@ -1,0 +1,21 @@
+<div style="padding: 5px">
+    <br />
+
+    <button
+            (click)=toggleServiceCallerInventorList()
+            class="btn btn-primary">
+    Toggle Service Caller (Inventor List)
+    </button>
+    <br />
+    <app-service-caller-inventor-list [hidden]="!isShowServiceCallerInventorList"></app-service-caller-inventor-list>
+    <br />
+
+    <button
+            (click)=toggleHttpServiceCallerProgrammerList()
+            class="btn btn-primary">
+    Toggle HTTP Service Caller (Programmer List)
+    </button>
+    <br />
+    <app-http-service-caller-programmer-list [hidden]="!isShowHttpServiceCallerProgrammerList"></app-http-service-caller-programmer-list>
+    <br />
+</div>

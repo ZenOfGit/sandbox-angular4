@@ -1,0 +1,7 @@
+
+sandbox-angular2/node_modules/
+sandbox-angular2/obj/
+sandbox-angular2/properties/
+sandbox-angular2/bin/
+.vs/
+packages/

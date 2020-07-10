@@ -1,0 +1,35 @@
+<div style="padding: 5px">
+    <br />
+
+    <button (click)=toggleBasicComponent()
+            class="btn btn-primary">
+        Toggle Basic Component
+    </button>
+    <br />
+    <app-basic-component [hidden]="!isShowBasicComponent"></app-basic-component>
+    <br />
+
+    <button (click)=toggleAttributeVsProperty()
+            class="btn btn-primary">
+        Toggle Attribute Vs Property
+    </button>
+    <br />
+    <app-attribute-vs-property [hidden]="!isShowAttributeVsProperty"></app-attribute-vs-property>
+    <br />
+
+    <button (click)=toggleNgForDirective()
+            class="btn btn-primary">
+        Toggle ngFor Directive
+    </button>
+    <br />
+    <app-ngfor-directive [hidden]="!isShowNgForDirective"></app-ngfor-directive>
+    <br />
+
+    <button (click)=toggleContainerAndNested()
+            class="btn btn-primary">
+    Toggle Container and Nested
+    </button>
+    <br />
+    <app-container-and-nested [hidden]="!isShowContainerAndNested"></app-container-and-nested>
+    <br />
+</div>

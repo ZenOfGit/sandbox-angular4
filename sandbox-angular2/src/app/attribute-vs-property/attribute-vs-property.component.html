@@ -1,0 +1,38 @@
+﻿
+    <div>
+        <br />
+        We are not binding to the disabled attribute of the button element, the attribute is used to initialize the property.
+        <br />
+        We are actually binding to the disabled PROPERTY of the button object in the DOM once angular uses the attribute to crete it.
+        <br />
+
+        <button [disabled]='isDisabled'
+                class="btn btn-success">
+            Click Me (I do nothing)
+        </button>
+        <br />
+
+        <button (click)='toggleTheButton()'
+                class="btn btn-info">
+            Toggle to Enable/Disable ^That^
+        </button>
+        <br />
+
+        <h2>Notes:</h2>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Attributes are defined by HTML but properties are defined by the DOM</li>
+            <li class="list-group-item">Attributes initialize DOM properties, so once the initialization is complete the attribute’s job is done, effectively disappearing after that</li>
+            <li class="list-group-item">Property values can change, attribute value cannot</li>
+        </ul>
+        The following input element has a value attribute that will initialize the value property of this input object in the DOM to Guy
+        <br />
+        Using inputId.getAttribute('value') and inputId1.value in the console will show "Guy" as our current value.
+        <br />
+        Changing the name to "Bloke" will still show "Guy" if we use inputId.getAttribute('value') because that's the attribute.
+        <br />
+        However if we enter inputId1.value, this time it will show the DOM property has the value which we have changed to "Bloke".
+        <br />
+        <br />
+        <input id='inputId' type='text' value='Guy'>
+        <br />
+    </div>

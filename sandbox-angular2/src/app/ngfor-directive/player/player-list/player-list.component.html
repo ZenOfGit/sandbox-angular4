@@ -1,0 +1,57 @@
+<br />
+Here we have a list of 4 hockey players initialized in our constructor.
+<br />
+When we click the Refresh Players button, we call a method that gets an object with the same name and content,
+<br />
+but it has one more player.  We are looping though these players with the structural directive *ngFor, (which 
+<br />
+needs the * because structural directives change the DOM) and in a large list, *ngFor may perform poorly.  When
+<br />
+Whemn we click to get the players, Angular tears the td and tr elements down and recretes them.  We can use
+<br />
+trackBy with the *ngFor directive to track by an id rather than object references, and Angular will keep track
+<br />
+of our hockey players and only replace the new one(s) which improves performance on large lists.
+<br />
+We have also added a few properties of *ngFor like i, isFirst, isLast, isOdd, and isEven to display them.
+<table>
+    <thead>
+    <th>Name</th>
+    <th>Gender</th>
+    <th>Annual Salary</th>
+    <th>Date of Birth</th>
+    <th>Index</th>
+    <th>Is First</th>
+    <th>Is Last</th>
+    <th>Is Even</th>
+    <th>Is Odd</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let player of players;
+          trackBy: trackByPlayerCode;
+          let i=index;
+          let isFirst=first;
+          let isLast=last;
+          let isEven=even;
+          let isOdd=odd">
+            <td>{{player.name}}</td>
+            <td>{{player.gender}}</td>
+            <td>{{player.annualSalary}}</td>
+            <td>{{player.dateOfBirth}}</td>
+            <td>{{i}}</td>
+            <td>{{isFirst}}</td>
+            <td>{{isLast}}</td>
+            <td>{{isEven}}</td>
+            <td>{{isOdd}}</td>
+        </tr>
+        <tr *ngIf="!players || players.length==0">
+            <td colspan="5">If players property does not exist or if there are no player objects, we show this message</td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<button 
+        (click)="getPlayers()"
+        class="btn btn-info">
+    Refresh Players
+</button>

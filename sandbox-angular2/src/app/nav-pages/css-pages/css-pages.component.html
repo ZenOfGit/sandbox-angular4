@@ -1,0 +1,10 @@
+<div style="padding: 5px">
+    <br />
+    <button (click)=toggleCssClassBinding()
+            class="btn btn-primary">
+        Toggle CSS Class Binding
+    </button>
+    <br />
+    <app-css-class-binding [hidden]="!isShowCssClassBinding"></app-css-class-binding>
+    <br />
+</div>

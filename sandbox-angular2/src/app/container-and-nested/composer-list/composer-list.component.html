@@ -1,0 +1,44 @@
+<br />
+Here we use a container component to display our table with the data, and a nested component
+<br />
+to show radio buttons that will be used to determine which records to show, called player count component.
+<br />
+It is nested inside the player list component (which will become the container or parent):
+<br />
+<h2>Concepts used to accomplish this:</h2>
+<ul class="list-group list-group-flush">
+    <li class="list-group-item">Container (parent) components</li>
+    <li class="list-group-item">Passing data from the nested (child) to the container and vice-versa</li>
+    <li class="list-group-item">Component input and output properties</li>
+    <li class="list-group-item">Creating custom events using the EventEmitter class</li>
+    <li class="list-group-item">Using the ng-container directive</li>
+</ul>
+<h3>Click a radio button to show just the males, just the females, or all of the composers.</h3>
+<app-composer-count [all]="getTotalComposersCount()"
+                    [male]="getTotalMaleComposersCount()"
+                    [female]="getTotalFemaleComposersCount()"
+                    (countRadioButtonSelectionChanged)="onComposerCountRadioButtonChange($event)">
+</app-composer-count>
+<table>
+    <thead>
+    <th>Code</th>
+    <th>Name</th>
+    <th>Gender</th>
+    <th>Annual Salary</th>
+    <th>Date of Birth</th>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let composer of composers">
+            <tr *ngIf="selectedComposerCountRadioButton==='All' || selectedComposerCountRadioButton==composer.gender">
+                <td>{{composer.code | uppercase}}</td>
+                <td>{{composer.name | titlePipe:composer.gender}}</td>
+                <td>{{composer.gender}}</td>
+                <td>{{composer.annualSalary}}</td>
+                <td>{{composer.dateOfBirth}}</td>
+            </tr>
+        </ng-container>
+        <tr *ngIf="!composers || composers.length==0">
+            <td colspan="5">If composers property does not exist or if there are no employee objects, we show this message</td>
+        </tr>
+    </tbody>
+</table>

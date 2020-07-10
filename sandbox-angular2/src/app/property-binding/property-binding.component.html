@@ -1,0 +1,43 @@
+﻿
+    <div>
+        <h1><span [innerHtml]='pageHeader'></span></h1>
+        <h1><span bind-innerHtml='pageHeader'></span></h1> <!-- cononical syntax -->
+        The above headers use property binding with two different syntax variations.
+        <br />
+        Below, the green button is set via property binding, so the toggle button works.
+        <br />
+        The red button is set via interpolation which does not work so it is alway disabled.
+        <br />
+        Potentially harmful HTML is shown via interpolation and property binding to show how angular handles it.
+        <br />
+        The same image is stored in an object and as a property, then shown via interpolation and property binding.
+        <br />
+
+        <button [disabled]='isDisabled'
+                class="btn btn-success">
+            Click Me
+        </button>
+        <br />
+
+        <button (click)='toggleTheButton()'
+                class="btn btn-info">
+            Toggle to Enable/Disable ^That^
+        </button>
+        <br />
+
+        <button disabled='{{isDisabled}}'
+                class="btn btn-danger">
+            Always Disabled
+        </button>
+        <br />
+
+        <div>{{badHtml}}</div>
+        <br />
+        <div [innerHtml]='badHtml'></div>
+        <br />
+
+        <img [src]="myImage.url" [alt]="myImage.description">
+        <br />
+        <img src={{myImage.url}} [alt]="myImage.description">
+        <br />
+    </div>

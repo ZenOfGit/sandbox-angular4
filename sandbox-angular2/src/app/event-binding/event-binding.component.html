@@ -1,0 +1,52 @@
+<br />
+Event binding involves data flowing from an element to a component, such as a click or text being entered.
+<br />
+We use parenthesis or canonical syntax to bind events as seen below (check the console to see the click event results.)
+<br />
+<button (click)='onClickOne()'
+        class="btn btn-warning">
+    Click Me (One)
+</button>
+<br />
+<br />
+<button on-click='onClickTwo()'
+        class="btn btn-warning">
+    Click Me (Two)
+</button>
+<br />
+<br />
+<table>
+    <thead>
+        <tr>
+            <th [attr.colspan]="columnSpan">
+                Surfer Details
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>First Name</td>
+            <td>{{firstName}}</td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td>{{lastName}}</td>
+        </tr>
+        <tr *ngIf='showDetails'>
+            <td>Gender</td>
+            <td>{{gender}}</td>
+        </tr>
+        <tr *ngIf='showDetails'>
+            <td>Age</td>
+            <td>{{age}}</td>
+        </tr>
+    </tbody>
+</table>
+<br />
+The button below uses event binding to show and hide the surfer's details
+<br />
+<button (click)='toggleDetails()'
+        class="btn btn-warning">
+    {{showDetails ? 'Hide' : 'Show'}} Details
+</button>
+<br />

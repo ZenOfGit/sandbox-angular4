@@ -1,0 +1,57 @@
+<br />
+Here, we will use the database instead of the hard-coded data from the get method.
+<br />
+Our Angular service will call the Web API service which will fetch data from SQL Server.
+<br />
+We need to import HttpModule in our root module first, then import Http in our service (then inject it.)
+<br />
+<h2>Steps in our service:</h2>
+<ul class="list-group list-group-flush">
+    <li class="list-group-item">1.  Return the get method of the Http service</li>
+    <li class="list-group-item">2.  Import Observable from rxjs</li>
+    <li class="list-group-item">3.  Specify the url to which we want to issue the get request</li>
+    <li class="list-group-item">4.  Change our return type from an array of our IProgrammer objects to an Observable of IProgrammer objects</li>
+    <li class="list-group-item">5.  Import Map</li>
+    <li class="list-group-item">6.  Chain the Map operator to our get method</li>
+    <li class="list-group-item">7.  Specify the parameter that we want to pass which we will call response</li>
+    <li class="list-group-item">8.  Import Response from @angular/http</li>
+    <li class="list-group-item">9.  Set the type of our response parameter that we are sending to the arrow function to Response</li>
+    <li class="list-group-item">10. Set the arrow function to convert this response to an array of IProgrammer objects</li>
+    <li class="list-group-item">11. Get the .json out of the response</li>
+    <li class="list-group-item">12. Use the type casting operator on it to cast it to an IProgrammer array</li>
+</ul>
+<h2>Steps in our list component to subscribe to the observable:</h2>
+<ul class="list-group list-group-flush">
+    <li class="list-group-item">1.  Chain the subscribe() method onto the getEmployees() method</li>
+    <li class="list-group-item">2.  Use an arrow function that will receive programmer data so we will name it programmerData</li>
+    <li class="list-group-item">3.  Use the arrow and code the function to set this programmers equal to whatever data the callback receives from this Observable, i.e. programmerData</li>
+    <li class="list-group-item">4.  Get rid of the programmers before the equal sign (if we have it leftover from using an alternative method to get the data)</li>
+</ul>
+<h2>Fix the CORS problem in Web.Config</h2>
+<ul class="list-group list-group-flush">
+    <li class="list-group-item">Within system.WebServer, httpProtocol, customHeaders:</li>
+    <li class="list-group-item">add name="Access-Control-Allow-Origin" value="*"</li>
+    <li class="list-group-item">add name="Access-Control-Allow-Headers" value="Content-Type</li>
+    <li class="list-group-item">add name="Access-Control-Allow-Methods" value="GET, POST, PUT, DELETE, OPTIONS</li>
+</ul>
+<table>
+    <thead>
+    <th>Code</th>
+    <th>Name</th>
+    <th>Gender</th>
+    <th>Salary</th>
+    <th>Date of Birth</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let programmer of programmers">
+            <td>{{programmer.code | uppercase}}</td>
+            <td>{{programmer.name }}</td>
+            <td>{{programmer.gender}}</td>
+            <td>{{programmer.annualSalary}}</td>
+            <td>{{programmer.dateOfBirth}}</td>
+        </tr>
+        <tr *ngIf="!programmers || programmers.length==0">
+            <td colspan="5">{{statusMessage}}</td>
+        </tr>
+    </tbody>
+</table>

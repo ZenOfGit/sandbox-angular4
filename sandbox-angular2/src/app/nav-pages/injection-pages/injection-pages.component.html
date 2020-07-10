@@ -1,0 +1,27 @@
+<div style="padding: 5px">
+    <br />
+    <br />
+    This color is initialized in a property in user-preferences.service.ts
+    <br />
+    which is registered in the root module.  Both components share a singleton
+    <br />
+    instance of it because we inject the service in the constructors rather than using
+    <br />
+    the new keyword, so we have only one singleton instance of the service used by both.
+    <br />
+    Typing a color in the box will thange the background of both components to match:
+    <br />
+    <br />
+
+    <button (click)=toggleDependencyInjectionOneComponent()
+            class="btn btn-primary">Dependency Injection Page One Component</button>
+    <br />
+    <app-dependency-injection-one [hidden]="!isShowDependencyInjectionOneComponent"></app-dependency-injection-one>
+    <br />
+
+    <button (click)=toggleDependencyInjectionTwoComponent()
+            class="btn btn-primary">Dependency Injection Page Two Component</button>
+    <br />
+    <app-dependency-injection-two [hidden]="!isShowDependencyInjectionTwoComponent"></app-dependency-injection-two>
+    <br />
+</div>

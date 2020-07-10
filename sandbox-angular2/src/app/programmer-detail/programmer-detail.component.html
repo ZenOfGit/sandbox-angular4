@@ -1,0 +1,40 @@
+<table *ngIf="programmer">
+    <thead>
+        <tr>
+            <th colspan="2">
+                Programmer Details
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Programmer Code</td>
+            <td>{{programmer.code | uppercase}}</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>{{programmer.name }}</td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>{{programmer.gender}}</td>
+        </tr>
+        <tr>
+            <td>Annual Salary</td>
+            <td>{{programmer.annualSalary}}</td>
+        </tr>
+        <tr>
+            <td>Date of Birth</td>
+            <td>{{programmer.dateOfBirth}}</td>
+        </tr>
+    </tbody>
+</table>
+<div *ngIf="!programmer">
+    {{statusMessage}}
+</div>
+<div style="margin-top: 5px">
+    <input type="button" class="btn btn-primary" (click)="onBackButtonClick()" value="Back to Programmers List" />
+</div>
+<div style="margin-top: 5px" *ngIf="!subscription.closed">
+    <input type="button" class="btn btn-primary" (click)="onCancelButtonClick()" value="Cancel Request" />
+</div>

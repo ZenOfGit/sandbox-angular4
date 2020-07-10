@@ -1,0 +1,44 @@
+<div style="padding: 5px">
+    <br />
+    <br />
+
+    <button
+        (click)=toggleInterpolation()
+        class="btn btn-primary">Toggle Interpolation
+    </button>
+    <br />
+    <app-interpolation [hidden]="!isShowInterpolation"></app-interpolation>
+    <br />
+
+    <button 
+        (click)=togglePropertyBinding()
+        class="btn btn-primary">Toggle Property Binding
+    </button>
+    <br />
+    <app-property-binding [hidden]="!isShowPropertyBinding"></app-property-binding>
+    <br />
+
+    <button
+        (click)=toggleAttributeBinding()
+        class="btn btn-primary">Toggle Attribute Binding
+    </button>
+    <br />
+    <app-attribute-binding [hidden]="!isShowAttributeBinding"></app-attribute-binding>
+    <br />
+
+    <button
+        (click)=toggleEventBinding()
+        class="btn btn-primary">Toggle Event Binding
+    </button>
+    <br />
+    <app-event-binding [hidden]="!isShowEventBinding"></app-event-binding>
+    <br />
+
+    <button
+        (click)=toggleTwoWayDataBinding()
+        class="btn btn-primary">Toggle Two Way Data Binding
+    </button>
+    <br />
+    <app-two-way-data-binding [hidden]="!isShowTwoWayDataBinding"></app-two-way-data-binding>
+    <br />
+</div>

@@ -1,0 +1,277 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4CEFDC72-F156-4870-8EA0-6ADA31A77F28}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>sandbox_angular2</RootNamespace>
+    <AssemblyName>sandbox-angular2</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44330</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>3.9</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="node_modules\jquery\dist\jquery.min.js" />
+    <Content Include="src\app\app.component.html" />
+    <Content Include="src\app\attribute-binding\attribute-binding.component.css" />
+    <Content Include="src\app\attribute-binding\attribute-binding.component.html" />
+    <Content Include="src\app\attribute-vs-property\attribute-vs-property.component.css" />
+    <Content Include="src\app\attribute-vs-property\attribute-vs-property.component.html" />
+    <Content Include="src\app\http-service-caller-programmer-list-promise\http-service-caller-programmer-list-promise.component.css" />
+    <Content Include="src\app\http-service-caller-programmer-list-promise\http-service-caller-programmer-list-promise.component.html" />
+    <Content Include="src\app\programmer-detail-promise\programmer-detail-promise.component.css" />
+    <Content Include="src\app\programmer-detail-promise\programmer-detail-promise.component.html" />
+    <Content Include="src\app\service-di-color-module\service-di-color-module.component.css" />
+    <Content Include="src\app\service-di-color-module\service-di-color-module.component.html" />
+    <Content Include="src\app\dashboard\dashboard.component.css" />
+    <Content Include="src\app\dashboard\dashboard.component.html" />
+    <Content Include="src\app\nav-pages\routing-page\routing-page.component.css" />
+    <Content Include="src\app\nav-pages\routing-page\routing-page.component.html" />
+    <Content Include="src\app\observables\observables.component.css" />
+    <Content Include="src\app\observables\observables.component.html" />
+    <Content Include="src\app\programmer-detail\programmer-detail.component.css" />
+    <Content Include="src\app\programmer-detail\programmer-detail.component.html" />
+    <Content Include="src\app\dependency-injection-one\dependency-injection-one.component.css" />
+    <Content Include="src\app\dependency-injection-one\dependency-injection-one.component.html" />
+    <Content Include="src\app\dependency-injection-two\dependency-injection-two.component.css" />
+    <Content Include="src\app\dependency-injection-two\dependency-injection-two.component.html" />
+    <Content Include="src\app\bootstrap-sandbox\bootstrap-sandbox.component.css" />
+    <Content Include="src\app\bootstrap-sandbox\bootstrap-sandbox.component.html" />
+    <Content Include="src\app\basic-component\basic-component.component.css" />
+    <Content Include="src\app\basic-component\basic-component.component.html" />
+    <Content Include="src\app\container-and-nested\composer-count\composer-count.component.css" />
+    <Content Include="src\app\container-and-nested\composer-count\composer-count.component.html" />
+    <Content Include="src\app\container-and-nested\composer-list\composer-list.component.css" />
+    <Content Include="src\app\container-and-nested\composer-list\composer-list.component.html" />
+    <Content Include="src\app\container-and-nested\container-and-nested.component.css" />
+    <Content Include="src\app\container-and-nested\container-and-nested.component.html" />
+    <Content Include="src\app\css-class-binding\css-class-binding.component.css" />
+    <Content Include="src\app\css-class-binding\css-class-binding.component.html" />
+    <Content Include="src\app\event-binding\event-binding.component.css" />
+    <Content Include="src\app\event-binding\event-binding.component.html" />
+    <Content Include="src\app\http-service-caller-programmer-list\http-service-caller-programmer-list.component.css" />
+    <Content Include="src\app\http-service-caller-programmer-list\http-service-caller-programmer-list.component.html" />
+    <Content Include="src\app\interpolation\interpolation.component.css" />
+    <Content Include="src\app\interpolation\interpolation.component.html" />
+    <Content Include="src\app\lifecycle-hooks\lifecycle-hooks.component.css" />
+    <Content Include="src\app\lifecycle-hooks\lifecycle-hooks.component.html" />
+    <Content Include="src\app\nav-bar\nav-bar.component.css" />
+    <Content Include="src\app\nav-bar\nav-bar.component.html" />
+    <Content Include="src\app\nav-pages\fundamentals\fundamentals.component.css" />
+    <Content Include="src\app\nav-pages\fundamentals\fundamentals.component.html" />
+    <Content Include="src\app\nav-pages\css-pages\css-pages.component.css" />
+    <Content Include="src\app\nav-pages\css-pages\css-pages.component.html" />
+    <Content Include="src\app\nav-pages\promises-and-observables\promises-and-observables.component.css" />
+    <Content Include="src\app\nav-pages\promises-and-observables\promises-and-observables.component.html" />
+    <Content Include="src\app\nav-pages\pipe-pages\pipe-pages.component.css" />
+    <Content Include="src\app\nav-pages\pipe-pages\pipe-pages.component.html" />
+    <Content Include="src\app\nav-pages\service-pages\service-pages.component.css" />
+    <Content Include="src\app\nav-pages\service-pages\service-pages.component.html" />
+    <Content Include="src\app\nav-pages\life-cycle-pages\life-cycle-pages.component.css" />
+    <Content Include="src\app\nav-pages\life-cycle-pages\life-cycle-pages.component.html" />
+    <Content Include="src\app\nav-pages\injection-pages\injection-pages.component.css" />
+    <Content Include="src\app\nav-pages\injection-pages\injection-pages.component.html" />
+    <Content Include="src\app\nav-pages\bootstrap-pages\bootstrap-pages.component.css" />
+    <Content Include="src\app\nav-pages\bootstrap-pages\bootstrap-pages.component.html" />
+    <Content Include="src\app\nav-pages\binding-pages\binding-pages.component.css" />
+    <Content Include="src\app\nav-pages\binding-pages\binding-pages.component.html" />
+    <Content Include="src\app\ngfor-directive\ngfor-directive.component.css" />
+    <Content Include="src\app\ngfor-directive\ngfor-directive.component.html" />
+    <Content Include="src\app\ngfor-directive\player\player-list\player-list.component.css" />
+    <Content Include="src\app\ngfor-directive\player\player-list\player-list.component.html" />
+    <Content Include="src\app\ngfor-directive\player\player.component.css" />
+    <Content Include="src\app\ngfor-directive\player\player.component.html" />
+    <Content Include="src\app\pipe-use\pipes.component.css" />
+    <Content Include="src\app\pipe-use\pipes.component.html" />
+    <Content Include="src\app\property-binding\property-binding.component.css" />
+    <Content Include="src\app\property-binding\property-binding.component.html" />
+    <Content Include="src\app\routing-example-programmers\routing-example-programmers.component.css" />
+    <Content Include="src\app\routing-example-programmers\routing-example-programmers.component.html" />
+    <Content Include="src\app\service-caller-inventor-list\service-caller-inventor-list.component.css" />
+    <Content Include="src\app\service-caller-inventor-list\service-caller-inventor-list.component.html" />
+    <Content Include="src\app\two-way-data-binding\two-way-data-binding.component.css" />
+    <Content Include="src\app\two-way-data-binding\two-way-data-binding.component.html" />
+    <Content Include="src\assets\images\angular2pic.png" />
+    <Content Include="src\assets\images\pinkman.png" />
+    <Content Include="src\favicon.ico" />
+    <Content Include="src\index.html" />
+    <Content Include="src\styles.css" />
+    <Content Include="src\systemjs-angular-loader.js" />
+    <Content Include="src\systemjs.config.extras.js" />
+    <Content Include="src\systemjs.config.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bs-config.json" />
+    <Content Include="package.json" />
+    <None Include="packages.config" />
+    <Content Include="src\tsconfig.json" />
+    <Content Include="tslint.json" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="src\app\app.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\app.component.ts" />
+    <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\attribute-binding\attribute-binding.component.ts" />
+    <TypeScriptCompile Include="src\app\attribute-vs-property\attribute-vs-property.component.ts" />
+    <TypeScriptCompile Include="src\app\http-service-caller-programmer-list-promise\http-service-caller-programmer-list-promise.component.ts" />
+    <TypeScriptCompile Include="src\app\programmer-detail-promise\programmer-detail-promise.component.ts" />
+    <TypeScriptCompile Include="src\app\service-di-color-module\service-di-color-module.component.ts" />
+    <TypeScriptCompile Include="src\app\dashboard\dashboard.component.ts" />
+    <TypeScriptCompile Include="src\app\modules\color.module.ts" />
+    <TypeScriptCompile Include="src\app\nav-pages\routing-page\routing-page.component.ts" />
+    <TypeScriptCompile Include="src\app\observables\observables.component.ts" />
+    <TypeScriptCompile Include="src\app\programmer-detail\programmer-detail.component.ts" />
+    <TypeScriptCompile Include="src\app\dependency-injection-one\dependency-injection-one.component.ts" />
+    <TypeScriptCompile Include="src\app\dependency-injection-two\dependency-injection-two.component.ts" />
+    <TypeScriptCompile Include="src\app\bootstrap-sandbox\bootstrap-sandbox.component.ts" />
+    <TypeScriptCompile Include="src\app\basic-component\basic-component.component.ts" />
+    <TypeScriptCompile Include="src\app\container-and-nested\composer-count\composer-count.component.ts" />
+    <TypeScriptCompile Include="src\app\container-and-nested\composer-list\composer-list.component.ts" />
+    <TypeScriptCompile Include="src\app\container-and-nested\container-and-nested.component.ts" />
+    <TypeScriptCompile Include="src\app\css-class-binding\css-class-binding.component.ts" />
+    <TypeScriptCompile Include="src\app\directives\red-text.directive.ts" />
+    <TypeScriptCompile Include="src\app\event-binding\event-binding.component.ts" />
+    <TypeScriptCompile Include="src\app\http-service-caller-programmer-list\http-service-caller-programmer-list.component.ts" />
+    <TypeScriptCompile Include="src\app\interfaces\composer.ts" />
+    <TypeScriptCompile Include="src\app\interfaces\inventor.ts" />
+    <TypeScriptCompile Include="src\app\interfaces\programmer.ts" />
+    <TypeScriptCompile Include="src\app\interpolation\interpolation.component.ts" />
+    <TypeScriptCompile Include="src\app\lifecycle-hooks\lifecycle-hooks.component.ts" />
+    <TypeScriptCompile Include="src\app\nav-bar\nav-bar.component.ts" />
+    <TypeScriptCompile Include="src\app\nav-pages\fundamentals\fundamentals.component.ts" />
+    <TypeScriptCompile Include="src\app\nav-pages\css-pages\css-pages.component.ts" />
+    <TypeScriptCompile Include="src\app\nav-pages\promises-and-observables\promises-and-observables.component.ts" />
+    <TypeScriptCompile Include="src\app\nav-pages\pipe-pages\pipe-pages.component.ts" />
+    <TypeScriptCompile Include="src\app\nav-pages\service-pages\service-pages.component.ts" />
+    <TypeScriptCompile Include="src\app\nav-pages\life-cycle-pages\life-cycle-pages.component.ts" />
+    <TypeScriptCompile Include="src\app\nav-pages\injection-pages\injection-pages.component.ts" />
+    <TypeScriptCompile Include="src\app\nav-pages\bootstrap-pages\bootstrap-pages.component.ts" />
+    <TypeScriptCompile Include="src\app\nav-pages\binding-pages\binding-pages.component.ts" />
+    <TypeScriptCompile Include="src\app\ngfor-directive\ngfor-directive.component.ts" />
+    <TypeScriptCompile Include="src\app\ngfor-directive\player\player-list\player-list.component.ts" />
+    <TypeScriptCompile Include="src\app\ngfor-directive\player\player.component.ts" />
+    <TypeScriptCompile Include="src\app\page-not-found\page-not-found.component.ts" />
+    <TypeScriptCompile Include="src\app\pipe-use\pipes.component.ts" />
+    <TypeScriptCompile Include="src\app\pipes\title.pipe.ts" />
+    <TypeScriptCompile Include="src\app\property-binding\property-binding.component.ts" />
+    <TypeScriptCompile Include="src\app\routing-example-programmers\routing-example-programmers.component.ts" />
+    <TypeScriptCompile Include="src\app\service-caller-inventor-list\service-caller-inventor-list.component.ts" />
+    <TypeScriptCompile Include="src\app\services\inventor.service.ts" />
+    <TypeScriptCompile Include="src\app\services\programmer-http-promise.service..ts" />
+    <TypeScriptCompile Include="src\app\services\programmer-http.service.ts" />
+    <TypeScriptCompile Include="src\app\services\color.service.ts" />
+    <TypeScriptCompile Include="src\app\services\user-preferences.service.ts" />
+    <TypeScriptCompile Include="src\app\two-way-data-binding\two-way-data-binding.component.ts" />
+    <TypeScriptCompile Include="src\main.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3889</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44330/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

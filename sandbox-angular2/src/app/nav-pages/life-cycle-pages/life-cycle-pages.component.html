@@ -1,0 +1,18 @@
+<div style="padding: 5px">
+    <br />
+
+    <button
+            (click)=toggleLifecycleHooks()
+            class="btn btn-primary">
+    Toggle Lifecycle Hooks
+    </button>
+    <br />
+
+    <div [hidden]="!isShowLifecycleHooks">
+        <br />
+        Your text: <input type="text" [(ngModel)]="userText" />
+        <br />
+        <app-lifecycle-hooks [simpleInput]="userText"></app-lifecycle-hooks>
+    </div>
+    <br />
+</div>

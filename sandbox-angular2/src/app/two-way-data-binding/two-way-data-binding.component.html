@@ -1,0 +1,25 @@
+<br />
+Below we have two way data binding, so the value flows from the class to the view template
+<br />
+and it flows from the view template to the class as well.  The first method has inpout that flows
+<br />
+one way fromk teh class to the HTML.  We then raise an event and use the data frokm our HTML page
+<br />
+to update the value of the text.  The second input box uses Angular's ngModel directive for a more
+<br />
+concise syntax.  We are using square brackets on the outside for property binding and parenthesis on
+<br />
+the inside for event binding, so we can compare it to a "bananna in a box" [()] for two way binding.
+<br />
+<br />
+Text: <input [value]='someText' (input)='someText=$event.target.value'/>
+<br />
+<br />
+You entered: {{someText}}
+<br />
+<br />
+Name: <input [(ngModel)]='name'/>
+<br/>
+<br />
+You entered: {{ name }}
+<br />

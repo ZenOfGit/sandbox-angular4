@@ -1,0 +1,30 @@
+<br />
+We have set up route parameters to navigate to selected programmers.  This is similar to the Observables and Promises page.
+<br />
+We have used some observable features which you can see by shutting down the web server.
+<br />
+<table>
+    <thead>
+    <th>Code</th>
+    <th>Name</th>
+    <th>Gender</th>
+    <th>Salary</th>
+    <th>Date of Birth</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let programmer of programmers">
+            <td>
+                <a [routerLink]="['/routingExampleProgrammers', programmer.code]">
+                    {{programmer.code | uppercase}}
+                </a>
+            </td>
+            <td>{{programmer.name }}</td>
+            <td>{{programmer.gender}}</td>
+            <td>{{programmer.annualSalary}}</td>
+            <td>{{programmer.dateOfBirth}}</td>
+        </tr>
+        <tr *ngIf="!programmers || programmers.length==0">
+            <td colspan="5">{{statusMessage}}</td>
+        </tr>
+    </tbody>
+</table>

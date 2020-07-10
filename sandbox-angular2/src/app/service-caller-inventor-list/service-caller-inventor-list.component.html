@@ -1,0 +1,43 @@
+<br />
+A service in angular is used any time you need to reuse data or logic across multipole components.
+<br />
+The service used for these inventors contains hard coded data, but it would normally fetch it from an API.
+<br />
+As with anything we want to use in our components, we export the service class.
+<br />
+We have imported an interface for our inventors.  Our component has imported the service.
+<br />
+We will inject our service into our controller's constructor.  We have also listed the controller as a provider.
+<br />
+Service calls are usually issued over http to remote web servers, so delays may happen, so the best place for
+<br />
+for service calls is the ngOnInit lifecycle hook which executes after the constructor.
+<br />
+A class constructor is automatically called when an instance of the class is created, and is generally used to initialize the fields.
+<br />
+The ngOnInit lifecycle hook method is called after the constructor and is generally used to perform tasks related to data bindings.
+<br />
+<br />
+<table>
+    <thead>
+    <th>Code</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Gender</th>
+    <th>Known For</th>
+    <th>Date of Birth</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let inventor of inventors">
+            <td>{{inventor.code | uppercase}}</td>
+            <td>{{inventor.firstName }}</td>
+            <td>{{inventor.lastName }}</td>
+            <td>{{inventor.gender}}</td>
+            <td>{{inventor.knownFor}}</td>
+            <td>{{inventor.dateOfBirth}}</td>
+        </tr>
+        <tr *ngIf="!inventors || inventors.length==0">
+            <td colspan="5">If inventors property does not exist or if there are no inventor objects, we show this message</td>
+        </tr>
+    </tbody>
+</table>

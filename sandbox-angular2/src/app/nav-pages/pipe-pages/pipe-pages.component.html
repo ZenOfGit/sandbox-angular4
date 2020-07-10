@@ -1,0 +1,10 @@
+<div style="padding: 5px">
+    <br />
+    <button (click)=togglePipes()
+            class="btn btn-primary">
+        Toggle Pipes
+    </button>
+    <br />
+    <app-pipes [hidden]="!isShowPipes"></app-pipes>
+    <br />
+</div>

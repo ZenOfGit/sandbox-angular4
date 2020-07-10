@@ -1,0 +1,47 @@
+<br />
+Here, we are using a promise instead of an observable to get the individual programmers
+<br />
+We are still getting the list with an observable.
+<br />
+<h2>We get observables by default, so if we need a promise we must convert our service</h2>
+<ul class="list-group list-group-flush">
+    <li class="list-group-item">1.	Import the toPromise operator from rxjs</li>
+    <li class="list-group-item">2.	Change the return type of the get method from an Observable to a Promise</li>
+    <li class="list-group-item">3.	Chain the toPromise() operator off of the map operator</li>
+    <li class="list-group-item">4.	Change the error handling code to handlePromiseError and create a method for it</li>
+    <li class="list-group-item">5.	Our promise error handler will need to be of type Promise&lt;any&gt;</li>
+    <li class="list-group-item">6.	It will also throw error rather than returning an observable throw error</li>
+</ul>
+<br />
+<h2>Now we need to make a change in our component class</h2>
+<ul class="list-group list-group-flush">
+    <li class="list-group-item">1.	We will get rid of our this.subscription initialization, but leave teh right side of teh equation</li>
+    <li class="list-group-item">2.	Change subscribe to then</li>
+    <li class="list-group-item">3.  Subscribe does not have a retry of any other additoinal methds like Observable does so we cannot have any</li>
+</ul>
+<br />
+<table>
+    <thead>
+    <th>Code</th>
+    <th>Name</th>
+    <th>Gender</th>
+    <th>Salary</th>
+    <th>Date of Birth</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let programmer of programmers">
+            <td>
+                <a [routerLink]="['/promisesObservables', programmer.code]">
+                    {{programmer.code | uppercase}}
+                </a>
+            </td>
+            <td>{{programmer.name }}</td>
+            <td>{{programmer.gender}}</td>
+            <td>{{programmer.annualSalary}}</td>
+            <td>{{programmer.dateOfBirth}}</td>
+        </tr>
+        <tr *ngIf="!programmers || programmers.length==0">
+            <td colspan="5">{{statusMessage}}</td>
+        </tr>
+    </tbody>
+</table>

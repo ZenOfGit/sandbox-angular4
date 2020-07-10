@@ -1,0 +1,26 @@
+<br />
+Here we have some hockey players with pipes used to format the data for us.
+<br />
+<table>
+    <thead>
+    <th>Name</th>
+    <th>Gender</th>
+    <th>Annual Salary</th>
+    <th>Date of Birth</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let player of players">
+            <td>{{player.name | titlePipe:player.gender}}</td>
+            <td>{{player.gender}}</td>
+            <td>{{player.annualSalary | currency:'USD':true:'1.3-3'}}</td>
+            <td>{{player.dateOfBirth | date:'MM/d/yy' | uppercase}}</td>
+        </tr>
+        <tr *ngIf="!players || players.length==0">
+            <td colspan="5">If players property does not exist or if there are no Players objects, we show this message</td>
+        </tr>
+    </tbody>
+</table>
+<h3>
+    Warning: the currency pipe has been changed in Angular v5. The symbolDisplay option (third parameter) is
+    now a string instead of a boolean. The accepted values are "code", "symbol" or "symbol-narrow".
+</h3>

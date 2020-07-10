@@ -1,0 +1,24 @@
+<br />
+Here we create and apply styles like color and font characteristics.
+<br />
+Each button gets it's styles through binding.
+<br />
+<button class="colorClass" [class]="classesToApply">My Button</button>
+<br>
+<br>
+<button class="{{makeItBlue}}">My Button</button>
+<br>
+<br>
+<button class="colorClass italicsClass boldClass" [class.boldClass]="!applyBoldClass">My Button</button>
+<br>
+<br>
+<button class="colorClass italicsClass boldClass" [attr.ng-class]="addClasses()">My Button</button>
+<br>
+<br>
+<button style="color: red" [style.fontWeight]="isBold ? 'bold' : 'normal'">My Button</button>
+<br>
+<br>
+<button style="color: red" [style.font-size.px]="fontSize">My Button</button>
+<br>
+<br>
+<button style="color: red" [ngStyle]="addStyles()">My Button</button>

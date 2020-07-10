@@ -1,0 +1,61 @@
+﻿<br />
+We use the corresponding DOM objects of HTML elements to modify them.
+<br />
+The DOM contains teh HTML elements as objects including properties, methods, and events.
+<br />
+The DOM is a standard for accessing, modifying, adding, or deleting HTML elements.
+<br />
+We can use interpolation and property binding to bind component class properties to HTML DOM element properties, and not attributes.
+<br />
+There are situations when we want to be able to bind to HTML element attributes and not properties.
+<br />
+The colspan element does not have a corresponding DOM property, so we want to bind to it’s HTML element attribute directly.
+<br />
+Angular recommends using property binding whenever possible, but it has provided the ability to use attribute binding.
+<br />
+In the class, we have hard coded the colspan property to 2.  Attempting to use interpolatin would give a "Can't bind" error.
+<br />
+Property binding would give the same error because colspan does not have a DOM proerty, so we must use attribute binding.
+<br />
+The first head row uses interpolation syntax, the second uses property binding:
+<div class="container-fluid">
+    <div class="row">
+        <div class="left">
+            <table>
+                <thead>
+                    <tr>
+                        <th attr.colspan="{{columnSpan}}">
+                            Cook Details (int)
+                        </th>
+                    </tr>
+                    <tr>
+                        <th [attr.colspan]="columnSpan">
+                            Cook Details (prop)
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>First Name</td>
+                        <td>{{firstName}}</td>
+                    </tr>
+                    <tr>
+                        <td>Last Name</td>
+                        <td>{{lastName}}</td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td>{{gender}}</td>
+                    </tr>
+                    <tr>
+                        <td>Age</td>
+                        <td>{{age}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="left">
+            <img class="pinkmancontainer" src="{{imagePath}}">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+
+<div>
+    <br />
+    This color is initialized in a property that resides in color.service which
+    <br />
+    is registered in color.module, which is registered in the root module.
+    <br />
+    We inject the service in this component's constructor rather than using
+    <br />
+    the new keyword so we have only one singleton instance of the service.
+    <br />
+    Typing a color in the box will thange the background to match:
+    <br />
+    <input type="text" [(ngModel)]="color" [style.background]="color" />
+    <br />
+</div>
