@@ -149,7 +149,7 @@
     <Content Include="src\app\service-caller-inventor-list\service-caller-inventor-list.component.html" />
     <Content Include="src\app\two-way-data-binding\two-way-data-binding.component.css" />
     <Content Include="src\app\two-way-data-binding\two-way-data-binding.component.html" />
-    <Content Include="src\assets\images\angular2pic.png" />
+    <Content Include="src\assets\images\angular4pic.png" />
     <Content Include="src\assets\images\pinkman.png" />
     <Content Include="src\favicon.ico" />
     <Content Include="src\index.html" />
