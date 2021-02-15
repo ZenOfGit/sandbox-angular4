@@ -13,7 +13,7 @@ exports.DashboardComponent = void 0;
 var core_1 = require("@angular/core");
 var DashboardComponent = /** @class */ (function () {
     function DashboardComponent() {
-        this.logo = 'angular2pic.png';
+        this.logo = 'angular4pic.png';
     }
     DashboardComponent.prototype.ngOnInit = function () {
     };

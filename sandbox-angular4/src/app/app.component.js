@@ -11,7 +11,7 @@ var core_1 = require("@angular/core");
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
         this.pageHeader = "Employee Details";
-        this.tech = 'Angular 2';
+        this.tech = 'Angular 4';
         // for lifecycle hooks:
         this.userText = 'Brad';
     }

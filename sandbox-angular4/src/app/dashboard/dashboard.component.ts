@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 
 export class DashboardComponent implements OnInit {
 
-    logo = 'angular2pic.png';
+    logo = 'angular4pic.png';
 
     constructor() { }
 

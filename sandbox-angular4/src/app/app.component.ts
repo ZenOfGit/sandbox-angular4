@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
     pageHeader: string = "Employee Details";
-    tech: string = 'Angular 2';
+    tech: string = 'Angular 4';
     // for lifecycle hooks:
     userText: string = 'Brad';
 }
