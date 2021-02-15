@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sandbox-angular4", "sandbox-angular2\sandbox-angular4.csproj", "{4CEFDC72-F156-4870-8EA0-6ADA31A77F28}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sandbox-angular4", "sandbox-angular4\sandbox-angular4.csproj", "{4CEFDC72-F156-4870-8EA0-6ADA31A77F28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
