@@ -65,7 +65,6 @@ C:\Users\halfp\Desktop\dev\sandbox-angular4\sandbox-angular4\bin\roslyn\VBCSComp
 C:\Users\halfp\Desktop\dev\sandbox-angular4\sandbox-angular4\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\halfp\Desktop\dev\sandbox-angular4\sandbox-angular4\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\halfp\Desktop\dev\sandbox-angular4\sandbox-angular4\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\halfp\Desktop\dev\sandbox-angular4\sandbox-angular4\obj\Debug\sandbox-angular4.csprojAssemblyReference.cache
 C:\Users\halfp\Desktop\dev\sandbox-angular4\sandbox-angular4\obj\Debug\sandbox-angular4.csproj.CoreCompileInputs.cache
 C:\Users\halfp\Desktop\dev\sandbox-angular4\sandbox-angular4\obj\Debug\sandbox-angular4.csproj.CopyComplete
 C:\Users\halfp\Desktop\dev\sandbox-angular4\sandbox-angular4\obj\Debug\sandbox-angular4.dll
