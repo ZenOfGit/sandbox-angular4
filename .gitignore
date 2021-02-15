@@ -1,7 +1,7 @@
 
-sandbox-angular2/node_modules/
-sandbox-angular2/obj/
-sandbox-angular2/properties/
-sandbox-angular2/bin/
+sandbox-angular4/node_modules/
+sandbox-angular4/obj/
+sandbox-angular4/properties/
+sandbox-angular4/bin/
 .vs/
 packages/
