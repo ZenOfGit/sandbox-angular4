@@ -225,7 +225,7 @@
     <TypeScriptCompile Include="src\app\routing-example-programmers\routing-example-programmers.component.ts" />
     <TypeScriptCompile Include="src\app\service-caller-inventor-list\service-caller-inventor-list.component.ts" />
     <TypeScriptCompile Include="src\app\services\inventor.service.ts" />
-    <TypeScriptCompile Include="src\app\services\programmer-http-promise.service..ts" />
+    <TypeScriptCompile Include="src\app\services\programmer-http-promise.service.ts" />
     <TypeScriptCompile Include="src\app\services\programmer-http.service.ts" />
     <TypeScriptCompile Include="src\app\services\color.service.ts" />
     <TypeScriptCompile Include="src\app\services\user-preferences.service.ts" />

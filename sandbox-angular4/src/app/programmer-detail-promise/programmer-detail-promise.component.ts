@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IProgrammer } from '../interfaces/programmer';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ProgrammerHttpPromiseService } from '../services/programmer-http-promise.service.';
+import { ProgrammerHttpPromiseService } from '../services/programmer-http-promise.service';
 import { ISubscription } from 'rxjs/Subscription';
 import 'rxjs/add/operator/retry';
 import 'rxjs/add/operator/retryWhen';

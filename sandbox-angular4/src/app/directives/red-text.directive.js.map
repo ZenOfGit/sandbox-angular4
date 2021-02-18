@@ -1,1 +1,0 @@
-{"version":3,"file":"red-text.directive.js","sourceRoot":"","sources":["red-text.directive.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA,sCAA8D;AAO9D;IACE,0BAAY,GAAe;QACzB,GAAG,CAAC,aAAa,CAAC,KAAK,CAAC,KAAK,GAAG,KAAK,CAAC;IACxC,CAAC;IAHU,gBAAgB;QAL5B,gBAAS,CAAC;YACT,QAAQ,EAAE,gBAAgB;SAC3B,CAAC;QAEE,wCAAwC;;yCAEzB,iBAAU;OADhB,gBAAgB,CAQ5B;IAAD,uBAAC;CAAA,AARD,IAQC;AARY,4CAAgB"}

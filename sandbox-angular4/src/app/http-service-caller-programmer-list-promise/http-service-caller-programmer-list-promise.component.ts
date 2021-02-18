@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProgrammerHttpPromiseService } from '../services/programmer-http-promise.service.';
+import { ProgrammerHttpPromiseService } from '../services/programmer-http-promise.service';
 import { IProgrammer } from '../interfaces/programmer';
 import { Http } from '@angular/http';
 

@@ -1,7 +1,28 @@
 
+# Ignore libraries, build files, etc
 sandbox-angular4/node_modules/
 sandbox-angular4/obj/
 sandbox-angular4/properties/
 sandbox-angular4/bin/
 .vs/
 packages/
+
+# Ignore transpiled (from TypeScript) main files
+sandbox-angular4/src/main.js
+sandbox-angular4/src/main.js.map
+
+# Ignore transpiled (from TypeScript) root files
+sandbox-angular4/src/app/*.js
+sandbox-angular4/src/app/*.map
+
+# Ignore transpiled (from TypeScript) component files
+sandbox-angular4/src/app/**/*.js
+sandbox-angular4/src/app/**/*.map
+
+# Ignore transpiled (from TypeScript) component/imbedded files
+sandbox-angular4/src/app/**/**/*.js
+sandbox-angular4/src/app/**/**/*.map
+
+# Ignore transpiled (from TypeScript) component/imbedded/imbeddeddd files
+sandbox-angular4/src/app/**/**/**/*.js
+sandbox-angular4/src/app/**/**/**/*.map

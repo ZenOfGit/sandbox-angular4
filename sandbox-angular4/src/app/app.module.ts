@@ -51,7 +51,7 @@ import { LifeCycleHookPagesComponent } from './nav-pages/life-cycle-pages/life-c
 import { PipePagesComponent } from './nav-pages/pipe-pages/pipe-pages.component';
 import { PromisesAndObservablesComponent } from './nav-pages/promises-and-observables/promises-and-observables.component';
 import { ServicePagesComponent } from './nav-pages/service-pages/service-pages.component';
-import { ProgrammerHttpPromiseService } from './services/programmer-http-promise.service.';
+import { ProgrammerHttpPromiseService } from './services/programmer-http-promise.service';
 
 const appRoutes: Routes = [
     { path: 'dashboard', component: DashboardComponent },
